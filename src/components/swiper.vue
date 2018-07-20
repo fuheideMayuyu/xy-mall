@@ -1,5 +1,5 @@
 <template>
-  <swiper  indicator-dots="true" autoplay="true" circular="true" interval="5000" duration="1000">
+  <swiper class="sp" indicator-dots="true" indicator-color="#fff" indicator-active-color="#FF66A6" autoplay="true" circular="true" interval="5000" duration="1000">
     <block  v-for="(item, index) in listImg" :key="index">
         <swiper-item>
             <image :src="item" class="slide-image" mode="aspectFill"/>
@@ -24,4 +24,12 @@ export default {
 </script>
 
 <style scoped>
+.sp{
+  width: 750rpx;
+  height: 250rpx;
+}
+.slide-image{
+  width: 750rpx;
+  height: 250rpx;
+}
 </style>

@@ -97,14 +97,13 @@ export default {
     background: #F4F4F4;
   }
   .product{
-    margin-top: 25rpx;
+    margin-top: 15rpx;
     margin-left: 23rpx;
     font-size: 28rpx;
-
   }
   .product-modul{
     display: inline-block;
-    margin-left: 25rpx;
+    margin-left: 15rpx;
     background: #fff;
     border-bottom-right-radius: 10rpx;
     border-bottom-left-radius: 10rpx;
@@ -113,8 +112,8 @@ export default {
     display: block;
   }
   .product-img{
-    width: 318rpx;
-    height: 318rpx;
+    width: 335rpx;
+    height: 313rpx;
     border-top-left-radius: 10rpx;
     border-top-right-radius: 10rpx;
 
