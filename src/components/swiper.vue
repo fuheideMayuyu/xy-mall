@@ -1,4 +1,5 @@
 <template>
+<!-- 轮播图组件 -->
   <swiper class="sp" indicator-dots="true" indicator-color="#fff" indicator-active-color="#FF66A6" autoplay="true" circular="true" interval="5000" duration="1000">
     <block  v-for="(item, index) in listImg" :key="index">
         <swiper-item>

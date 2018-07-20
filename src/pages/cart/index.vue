@@ -1,6 +1,6 @@
 <template>
-  <div>
-    我是购物车
+  <div class="cart">
+    购物车
   </div>
 </template>
 
@@ -17,4 +17,11 @@ export default {
 </script>
 
 <style scoped>
+/* 购物车 */
+.cart {
+  width: 750rpx;
+  height: 1500rpx;
+  background: #f5f5f5;
+  font-size: 30rpx;
+}
 </style>
