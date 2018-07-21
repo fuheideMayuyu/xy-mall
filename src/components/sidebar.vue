@@ -3,19 +3,19 @@
   <div class="sidebar">
     <div class="category-list top">
       <a class="category-txt">洗面奶</a>
-      <image class="icon-btn" src='/static/images/icon-img/back-icon.png'></image>
+      <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
     </div>
     <div class="category-list">
       <a class="category-txt">卸妆水</a>
-      <image class="icon-btn" src='/static/images/icon-img/back-icon.png'></image>
+      <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
     </div>
     <div class="category-list">
       <a class="category-txt">化妆水</a>
-      <image class="icon-btn" src='/static/images/icon-img/back-icon.png'></image>
+      <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
     </div>
     <div class="category-list">
       <a class="category-txt">爽肤水</a>
-      <image class="icon-btn" src='/static/images/icon-img/back-icon.png'></image>
+      <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
     </div>
   </div>
 </template>
