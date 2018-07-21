@@ -2,7 +2,7 @@
   <div class="user">
     <div class="user-module">
       <img class="user-img" src="/static/images/icon-img/avatar.png">
-      <span class="user-txt">点击获取头像</span>
+      <button class="user-txt">点击获取头像</button>
     </div>
     <div class="order">
       <span class="my-order">我的订单</span>
@@ -11,20 +11,20 @@
     </div>
     <div class="order-status">
       <a class="wait-pay public">
-        <image class="wait-pay-icon public-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
-        <span class="wait-pay-txt public-txt">待付款</span>
+        <image class="public-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
+        <span class="public-txt">待付款</span>
       </a>
       <a class="wait-ship public">
-        <image class="wait-ship-icon public-icon" src="/static/images/icon-img/delivered-icon.png"></image>
-        <span class="wait-ship-txt public-txt">待发货</span>
+        <image class="public-icon" src="/static/images/icon-img/delivered-icon.png"></image>
+        <span class="public-txt">待发货</span>
       </a>
       <a class="ship public">
-        <image class="ship-icon public-icon" src="/static/images/icon-img/ship-icon.png"></image>
-        <span class="ship-txt public-txt">已发货</span>
+        <image class="public-icon" src="/static/images/icon-img/ship-icon.png"></image>
+        <span class="public-txt">已发货</span>
       </a>
       <a class="carry public">
-        <image class="carry-icon public-icon" src="/static/images/icon-img/carry-icon.png"></image>
-        <span class="carry-txt public-txt">已完成</span>
+        <image class="public-icon" src="/static/images/icon-img/carry-icon.png"></image>
+        <span class="public-txt">已完成</span>
       </a>
     </div>
   </div>
@@ -52,16 +52,22 @@ export default {
   color:#FF66A6;
   text-align: center;
   background: #fff;
-  margin-top: 30rpx;
+  padding-top: 30rpx;
 }
 .user-img{
   width: 200rpx;
   height: 200rpx;
 }
-.user-txt{
-  display: block;
+button{
+  margin: 0;
+  padding: 0;
   margin-top: 20rpx;
   padding-bottom: 50rpx;
+  color:#FF66A6;
+  background: #fff;
+}
+button::after{
+border:none;
 }
 /* 订单模块 */
 .order{
@@ -75,7 +81,7 @@ export default {
 }
 .my-order{
   margin-left: 20rpx;
-  color:#000;
+  font-weight:bold;
 }
 .all-order{
   margin-left: 390rpx;

@@ -1,40 +1,22 @@
 <template>
-  <div class="bg">
-    <m-swiper></m-swiper>
-    <div class="product">
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
+  <div>
+    <div class="bg">
+      <m-search></m-search>
     </div>
-    <div class="product">
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这里是产品名称名称名称名称名称蔡铭超名称成名称名称</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
+    <div class="filter">
+      <div class="filter-w">
+        <span>最新</span>
+        <span class="up"></span>
       </div>
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
+      <div class="filter-w">
+        <span>价格</span>
+        <span class="up"></span>
+        <span class="down"></span>
+      </div>
+      <div class="filter-w">
+        <span>销量</span>
+        <span class="up"></span>
+        <span class="down"></span>
       </div>
     </div>
     <div class="product">
@@ -73,22 +55,36 @@
         </a>
       </div>
     </div>
-    <div class="all-product">
-      查看全部商品
+    <div class="product">
+      <div class="product-modul">
+        <a class="product-a">
+            <image class="product-img" src="/static/images/product-img/1.jpg"/>
+            <p class="product-description">这里是产品名称，这...</p>
+            <span class="price-o">￥5.00</span>
+            <span class="price-n">￥10.00</span>
+        </a>
+      </div>
+      <div class="product-modul">
+        <a class="product-a">
+            <image class="product-img" src="/static/images/product-img/1.jpg"/>
+            <p class="product-description">这里是产品名称，这...</p>
+            <span class="price-o">￥5.00</span>
+            <span class="price-n">￥10.00</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import swiper from '@/components/swiper'
+import search from '@/components/search'
 
 export default {
   data () {
     return {}
   },
-
   components: {
-    'm-swiper': swiper
+    'm-search': search
   },
   methods: {},
   created () {}
@@ -96,12 +92,50 @@ export default {
 </script>
 
 <style scoped>
-/* 背景 */
-  .bg{
-    background: #F4F4F4;
-  }
-  /* 商品 */
-  .product{
+.bg{
+  width: 750rpx;
+  height: 80rpx;
+  background: #fff;
+}
+/* 商品排序 */
+.filter{
+  width: 750rpx;
+  height: 80rpx;
+  background: #fff;
+  border-top: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+  font-size: 30rpx;
+}
+.filter-w{
+  display: inline-block;
+  width: 250rpx;
+  height: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  margin-left: -10rpx;
+}
+.up{
+  display:block;
+  margin-left: 165rpx;
+  margin-top: -50rpx;
+  width:0;
+  height:0;
+  border-width:0 10rpx 10rpx;
+  border-style:solid;
+  border-color:transparent transparent #696969;
+}
+.down{
+  display:block;
+  margin-left: 165rpx;
+  margin-top: 5rpx;
+  width:0;
+  height:0;
+  border-width: 10rpx 10rpx 0;
+  border-style:solid;
+  border-color:  #696969 transparent transparent;
+}
+/* 商品列表 */
+ .product{
     overflow: hidden;
     margin-top: 15rpx;
     margin-left: 20rpx;
@@ -149,18 +183,5 @@ export default {
     margin-right: 15rpx;
     font-size: 20rpx;
     text-decoration:line-through
-  }
-  /* 查看所有商品 */
-  .all-product{
-    margin-top: 15rpx;
-    margin-left: 32rpx;
-    width: 685rpx;
-    height: 80rpx;
-    background: #fff;
-    border-radius: 10rpx;
-    font-size: 30rpx;
-    color: #FF66A6;
-    line-height: 80rpx;
-    text-align: center;
   }
 </style>

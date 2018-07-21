@@ -1,9 +1,9 @@
 <template>
 <!-- 轮播图组件 -->
-  <swiper class="sp" indicator-dots="true" indicator-color="#fff" indicator-active-color="#FF66A6" autoplay="true" circular="true" interval="5000" duration="1000">
+  <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#FF66A6" autoplay="true" circular="true" interval="5000" duration="1000">
     <block  v-for="(item, index) in listImg" :key="index">
         <swiper-item>
-            <image :src="item" class="slide-image" mode="aspectFill"/>
+            <image :src="item" class="slide-image" mode="widthFix"/>
         </swiper-item>
     </block>
   </swiper>
@@ -25,12 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.sp{
-  width: 750rpx;
-  height: 250rpx;
-}
 .slide-image{
-  width: 750rpx;
-  height: 250rpx;
+  width: 100%;
 }
 </style>

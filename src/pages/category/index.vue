@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg">
     <m-search></m-search>
     <m-sidebar></m-sidebar>
   </div>
@@ -22,4 +22,7 @@ export default {
 </script>
 
 <style scoped>
+.bg{
+  background: #fff;
+}
 </style>
