@@ -1,6 +1,7 @@
 <template>
+<!-- 首页 -->
   <div class="bg">
-    <m-swiper></m-swiper>
+    <m-swiper :listImg="listImg"></m-swiper>
     <div class="product">
       <div class="product-modul">
         <a class="product-a">
@@ -84,7 +85,14 @@ import swiper from '@/components/swiper'
 
 export default {
   data () {
-    return {}
+    return {
+      listImg: [
+        '/static/images/swiper-img/1.jpg',
+        '/static/images/swiper-img/2.jpg',
+        '/static/images/swiper-img/3.jpg',
+        '/static/images/swiper-img/4.jpg'
+      ]
+    }
   },
 
   components: {

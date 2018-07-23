@@ -1,4 +1,5 @@
 <template>
+<!-- 分类筛选 -->
   <div>
     <div class="bg">
       <m-search></m-search>

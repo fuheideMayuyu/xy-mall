@@ -1,4 +1,5 @@
 <template>
+<!-- 商品分类 -->
   <div class="bg">
     <m-search></m-search>
     <m-sidebar></m-sidebar>

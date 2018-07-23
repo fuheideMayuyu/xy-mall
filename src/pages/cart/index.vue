@@ -1,4 +1,5 @@
 <template>
+<!-- 购物车 -->
   <div class="cart">
     <div class="edit">
       <radio class="all-radio" color="#FF66A6"/>

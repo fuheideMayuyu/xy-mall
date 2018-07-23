@@ -1,4 +1,5 @@
 <template>
+<!-- 个人中心 -->
   <div class="user">
     <div class="user-module">
       <img class="user-img" src="/static/images/icon-img/avatar.png">
@@ -10,19 +11,19 @@
       <image class="go-icon" src="/static/images/icon-img/go-icon.png"></image>
     </div>
     <div class="order-status">
-      <a class="wait-pay public">
+      <a class="wait-pay public" href="/pages/waitPay/main">
         <image class="public-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
         <span class="public-txt">待付款</span>
       </a>
-      <a class="wait-ship public">
+      <a class="wait-ship public" href="/pages/waitGoods/main">
         <image class="public-icon" src="/static/images/icon-img/delivered-icon.png"></image>
         <span class="public-txt">待发货</span>
       </a>
-      <a class="ship public">
+      <a class="ship public" href="/pages/alreadyGoods/main">
         <image class="public-icon" src="/static/images/icon-img/ship-icon.png"></image>
         <span class="public-txt">已发货</span>
       </a>
-      <a class="carry public">
+      <a class="carry public" href="/pages/successGoods/main">
         <image class="public-icon" src="/static/images/icon-img/carry-icon.png"></image>
         <span class="public-txt">已完成</span>
       </a>
