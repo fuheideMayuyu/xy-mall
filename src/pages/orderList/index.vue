@@ -1,6 +1,7 @@
 <template>
-<!-- 已发货订单页 -->
-  <div>我是已完成订单页</div>
+<!-- 订单列表页 -->
+  <div>订单列表页</div>
+</div>
 </template>
 
 <script>

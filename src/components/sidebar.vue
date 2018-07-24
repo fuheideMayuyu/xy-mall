@@ -1,22 +1,22 @@
 <template>
 <!-- 分类组件 -->
   <div class="sidebar">
-    <div class="category-list top">
-      <a href="/pages/goodsFilter/main" class="category-txt">洗面奶</a>
+    <a class="category-list top" href="/pages/goodsFilter/main">
+      <span  class="category-txt">洗面奶</span>
       <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
-    </div>
-    <div class="category-list">
-      <a class="category-txt">卸妆水</a>
+    </a>
+    <a class="category-list">
+      <sapn class="category-txt">卸妆水</sapn>
       <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
-    </div>
-    <div class="category-list">
-      <a class="category-txt">化妆水</a>
+    </a>
+    <a class="category-list">
+      <sapn class="category-txt">化妆水</sapn>
       <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
-    </div>
-    <div class="category-list">
-      <a class="category-txt">爽肤水</a>
+    </a>
+    <a class="category-list">
+      <sapn class="category-txt">爽肤水</sapn>
       <image class="icon-btn" src='/static/images/icon-img/go-icon.png'></image>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -35,21 +35,22 @@ export default {
 <style scoped>
 /* 商品类目 */
 .category-list{
+  display: inline-block;
   width: 750rpx;
   height: 80rpx;
   line-height: 80rpx;
   font-size: 30rpx;
   background: #fff;
   border-bottom: 1px solid #f5f5f5;
-  padding-left: 32rpx;
+  padding-left: 20rpx;
 }
 .top{
-  border-top: 2px solid #f5f5f5;
+  border-top: 1px solid #f5f5f5;
 }
 /* 商品类目文本 */
 .category-txt{
   display: inline-block;
-  width: 665rpx;
+  width: 690rpx;
   height: 80rpx;
 }
 /* 商品类目图标 */

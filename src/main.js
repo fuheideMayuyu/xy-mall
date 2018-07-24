@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import './common/style/reset.css'
+import './common/style/common.css'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
@@ -13,15 +14,17 @@ export default {
   config: {
     // 页面前带有 ^ 符号的，会被编译成首页，其他页面可以选填，我们会自动把 webpack entry 里面的入口页面加进去
     pages: [
-      '^pages/home/main',
-      'pages/category/main',
-      'pages/user/main',
-      'pages/cart/main',
-      'pages/goodsFilter/main',
-      'pages/orderList/main',
-      'pages/waitPay/main',
-      'pages/alreadyGoods/main',
-      'pages/successGoods/main'
+      '^pages/home/main', // 首页
+      'pages/category/main', // 分类
+      'pages/user/main', // 个人中心
+      'pages/cart/main', // 购物车
+      'pages/goodsFilter/main', // 分类筛选
+      'pages/orderSubmit/main', // 订单待提交
+      'pages/orderPay/main', // 订单待提交
+      'pages/waitPay/main', // 订单待支付
+      'pages/waitGoods/main', // 订单待发货
+      'pages/alreadyGoods/main', // 订单已发货
+      'pages/successGoods/main' // 订单已完成
     ],
     window: {
       backgroundTextStyle: 'light',

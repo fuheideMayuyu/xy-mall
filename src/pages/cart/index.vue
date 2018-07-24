@@ -39,7 +39,7 @@
         <span class="price">￥10.0</span>
         <span class="freight-txt">(不含运费)</span>
       </div>
-      <span class="settlement-txt">去结算</span>
+      <a href="/pages/orderSubmit/main" class="settlement-txt">去结算</a>
     </div>
   </div>
 </template>
@@ -49,7 +49,6 @@ export default {
   data () {
     return {}
   },
-
   components: {},
   methods: {},
   created () {}

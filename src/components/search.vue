@@ -21,10 +21,11 @@ export default {
 
 <style scoped>
 .search{
-  margin-left: 32rpx;
+  margin-left: 20rpx;
   margin-bottom: 30rpx;
-  width: 685rpx;
+  width: 710rpx;
   height: 55rpx;
+  line-height: 55rpx;
   font-size:30rpx;
   border: 2rpx solid #f5f5f5;
   border-radius: 30rpx;
@@ -40,6 +41,8 @@ export default {
 .search-input{
   display: inline-block;
   width: 500rpx;
-  margin-top: -23rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-top: -28rpx;
 }
 </style>

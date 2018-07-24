@@ -7,24 +7,26 @@
     </div>
     <div class="order">
       <span class="my-order">我的订单</span>
-      <span class="all-order">查看全部订单</span>
-      <image class="go-icon" src="/static/images/icon-img/go-icon.png"></image>
+      <a class="all-order display-box" href="/pages/orderList/main">
+        <span>查看全部订单</span>
+        <image class="go-icon" src="/static/images/icon-img/go-icon.png"></image>
+      </a>
     </div>
     <div class="order-status">
       <a class="wait-pay public" href="/pages/waitPay/main">
-        <image class="public-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
+        <image class="public-icon wait-pay-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
         <span class="public-txt">待付款</span>
       </a>
       <a class="wait-ship public" href="/pages/waitGoods/main">
-        <image class="public-icon" src="/static/images/icon-img/delivered-icon.png"></image>
+        <image class="public-icon wait-ship-icon" src="/static/images/icon-img/delivered-icon.png"></image>
         <span class="public-txt">待发货</span>
       </a>
       <a class="ship public" href="/pages/alreadyGoods/main">
-        <image class="public-icon" src="/static/images/icon-img/ship-icon.png"></image>
+        <image class="public-icon ship-icon" src="/static/images/icon-img/ship-icon.png"></image>
         <span class="public-txt">已发货</span>
       </a>
       <a class="carry public" href="/pages/successGoods/main">
-        <image class="public-icon" src="/static/images/icon-img/carry-icon.png"></image>
+        <image class="public-icon carry-icon" src="/static/images/icon-img/carry-icon.png"></image>
         <span class="public-txt">已完成</span>
       </a>
     </div>
@@ -36,7 +38,6 @@ export default {
   data () {
     return {}
   },
-
   components: {},
   methods: {},
   created () {}
@@ -68,12 +69,13 @@ button{
   background: #fff;
 }
 button::after{
-border:none;
+  border:none;
 }
 /* 订单模块 */
 .order{
   width: 750rpx;
   height: 100rpx;
+  line-height: 100rpx;
   margin-top: 20rpx;
   background: #fff;
   line-height: 100rpx;
@@ -85,37 +87,54 @@ border:none;
   font-weight:bold;
 }
 .all-order{
-  margin-left: 390rpx;
+  display: inline-block;
+  margin-top: -25rpx;
+  margin-left: 410rpx;
   font-size:25rpx;
   color:#808080;
 }
 .go-icon{
   display: inline-block;
-  padding-top: 40rpx;
+  margin-top: -10rpx;
+  vertical-align: middle;
   padding-left: 20rpx;
-  width: 30rpx;
+  width: 15rpx;
   height: 30rpx;
 }
 /* 订单状态模块 */
 .order-status{
   width: 750rpx;
-  height: 250rpx;
+  height: 650rpx;
+  line-height: 250rpx;
   background: #fff;
   padding-top: 30rpx;
 }
 .public{
-  width: 165rpx;
+  width: 162.5rpx;
   height: 165rpx;
+  line-height: 165rpx;
   display: inline-block;
   background: #f5f5f5;
   border-radius: 10rpx;
-  margin-left: 16.6rpx;
+  margin-left: 20rpx;
   line-height: 170rpx;
   text-align: center;
 }
-.public-icon{
-  width: 50rpx;
-  height: 50rpx;
+.wait-pay-icon{
+  width: 52rpx;
+  height: 44rpx;
+}
+.wait-ship-icon{
+  width: 56rpx;
+  height: 44rpx;
+}
+.ship-icon{
+  width: 62rpx;
+  height: 46rpx;
+}
+.carry-icon{
+  width: 42rpx;
+  height: 46rpx;
 }
 .public-txt{
   display: block;

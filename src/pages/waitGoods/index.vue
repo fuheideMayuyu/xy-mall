@@ -1,20 +1,23 @@
 <template>
 <!-- 待付款订单 -->
-  <div>我是待发货订单页</div>
+  <div class="wait-pay">
+    <div class="wait-pay-top">
+      <image src=""></image>
+    </div>
+    <div class="wait-pay-bottom"></div>
+  </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {};
+    return {}
   },
   components: {},
-  methods: {}
+  methods: {},
+  created () {}
 }
-
 </script>
+
 <style scoped>
-div{
-  font-size:30rpx;
-}
 </style>

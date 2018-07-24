@@ -1,6 +1,6 @@
 <template>
-<!-- 已发货订单页 -->
-  <div>我是已完成订单页</div>
+<!-- 订单支付页 -->
+  <div>我是订单支付页</div>
 </template>
 
 <script>
@@ -9,8 +9,8 @@ export default {
     return {}
   },
   components: {},
-  methods: {},
-  created () {}
+  computed: {},
+  methods: {}
 }
 </script>
 

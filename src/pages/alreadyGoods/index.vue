@@ -6,15 +6,12 @@
 <script>
 export default {
   data () {
-    return {};
+    return {}
   },
   components: {},
   methods: {}
 }
-
 </script>
+
 <style scoped>
-div{
-  font-size:30rpx;
-}
 </style>

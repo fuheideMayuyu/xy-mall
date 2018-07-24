@@ -7,7 +7,7 @@
     <div class="filter">
       <div class="filter-w">
         <span>最新</span>
-        <span class="up"></span>
+        <span class="down new-down"></span>
       </div>
       <div class="filter-w">
         <span>价格</span>
@@ -20,72 +20,23 @@
         <span class="down"></span>
       </div>
     </div>
-    <div class="product">
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-    </div>
-    <div class="product">
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-    </div>
-    <div class="product">
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-      <div class="product-modul">
-        <a class="product-a">
-            <image class="product-img" src="/static/images/product-img/1.jpg"/>
-            <p class="product-description">这里是产品名称，这...</p>
-            <span class="price-o">￥5.00</span>
-            <span class="price-n">￥10.00</span>
-        </a>
-      </div>
-    </div>
+    <m-product></m-product>
+    <m-product></m-product>
+    <m-product></m-product>
   </div>
 </template>
 
 <script>
 import search from '@/components/search'
+import product from '@/components/product'
 
 export default {
   data () {
     return {}
   },
   components: {
-    'm-search': search
+    'm-search': search,
+    'm-product': product
   },
   methods: {},
   created () {}
@@ -123,7 +74,7 @@ export default {
   height:0;
   border-width:0 10rpx 10rpx;
   border-style:solid;
-  border-color:transparent transparent #696969;
+  border-color:transparent transparent 	#D3D3D3;
 }
 .down{
   display:block;
@@ -133,7 +84,10 @@ export default {
   height:0;
   border-width: 10rpx 10rpx 0;
   border-style:solid;
-  border-color:  #696969 transparent transparent;
+  border-color:  	#D3D3D3 transparent transparent;
+}
+.new-down{
+  margin-top: -36rpx;
 }
 /* 商品列表 */
  .product{
