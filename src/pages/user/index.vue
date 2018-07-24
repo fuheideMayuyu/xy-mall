@@ -13,7 +13,7 @@
       </a>
     </div>
     <div class="order-status">
-      <a class="wait-pay public" href="/pages/waitPay/main">
+      <a class="wait-pay public" href="/pages/orderPay/main">
         <image class="public-icon wait-pay-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
         <span class="public-txt">待付款</span>
       </a>

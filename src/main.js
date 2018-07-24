@@ -20,8 +20,7 @@ export default {
       'pages/cart/main', // 购物车
       'pages/goodsFilter/main', // 分类筛选
       'pages/orderSubmit/main', // 订单待提交
-      'pages/orderPay/main', // 订单待提交
-      'pages/waitPay/main', // 订单待支付
+      'pages/orderPay/main', // 订单待支付
       'pages/waitGoods/main', // 订单待发货
       'pages/alreadyGoods/main', // 订单已发货
       'pages/successGoods/main' // 订单已完成

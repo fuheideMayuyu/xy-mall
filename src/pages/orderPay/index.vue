@@ -1,23 +1,33 @@
 <template>
-<!-- 待付款订单 -->
-  <div class="wait-pay">
-    <!-- 增加收货地址 -->
-    <div class="address">
-      <image class="address-icon" src="/static/images/icon-img/receipt-icon-active.png"></image>
-      <span>新增收货地址</span>
-    </div>
-   <!-- 信封图片 -->
-    <image class="envelope-icon" src="/static/images/icon-img/envelope-icon.png"></image>
-    <!-- 填写身份证信息 -->
-    <div class="user-info">
-      <image class="user-info-icon" src="/static/images/icon-img/user-info-icon.png"></image>
-      <div class="user-info-center">
-        <p class="user-id">身份证信息</p>
-        <p class="prompt-info">根据海关规定，需要您完善收件人身份证信息</p>
+<!-- 订单支付页 -->
+  <div class="pay">
+    <!-- 付款提示 -->
+    <div class="pay-header">
+      <image class="wait-pay-img" src="/static/images/icon-img/wait-pay-img.png"></image>
+      <div class="wait-pay-txt">
+        <p>等待买家付款</p>
+        <p class="order-prompt">请于52分0秒内付款，超时订单将自动关闭</p>
       </div>
-      <image class="edit-info-icon" src="/static/images/icon-img/edit-info-icon.png"></image>
     </div>
-    <!-- 店铺 -->
+    <m-orderStatus></m-orderStatus>
+    <!-- 收货地址 -->
+    <div class="receipt">
+      <image class="receipt-icon" src="/static/images/icon-img/receipt-icon.png"></image>
+      <div class="receipt-txt">
+        <span class="receipt-name">收货人:小梦</span>
+        <span class="address-code">1300000000000</span>
+        <p class="address">广东省深圳市南山区 软件产业基地 4栋A座501广东省深圳市南山区 软件产业基地 4栋A座501</p>
+      </div>
+    </div>
+    <div class="line"></div>
+    <!-- 身份证信息 -->
+    <div class="user-id">
+      <image class="user-icon" src="/static/images/icon-img/user-info-icon.png"></image>
+      <span>456420199908023625</span>
+    </div>
+    <!-- 信封图片 -->
+    <image class="envelope-icon" src="/static/images/icon-img/envelope-icon.png"></image>
+        <!-- 店铺 -->
     <a class="shop-info">
       <image class="shop-info-icon" src="/static/images/icon-img/logo.png"></image>
       <span class="shop-info-name">小梦的店铺</span>
@@ -69,82 +79,118 @@
     <div class="submit-order">
       <span class="total-txt-bottom">合计:</span>
       <span class="total-price">￥20.00</span>
-      <a class="submit-order-a" href="/pages/orderPay/main">提交订单</a>
+      <a class="submit-order-a">去支付</a>
     </div>
   </div>
 </template>
 
 <script>
+import orderStatus from '@/components/orderStatus'
 export default {
   data () {
     return {}
   },
-  components: {},
-  methods: {},
-  created () {}
+  components: {
+    'm-orderStatus': orderStatus
+  },
+  computed: {},
+  methods: {}
 }
 </script>
 
 <style scoped>
-/* 新增收货地址 */
-.address{
+.pay{
   width: 750rpx;
+  overflow: hidden;
+  font-size:30rpx;
+}
+/* 付款提示 */
+.pay-header{
+  width: 100%;
   height: 120rpx;
-  line-height: 120rpx;
-  background: #fff;
-  font-size:35rpx;
-  text-align: center;
-  color: #FF66A6;
+  background: #FFAD33;
 }
-.address-icon{
+.wait-pay-img{
+  width: 52rpx;
+  height: 44rpx;
+  margin: auto 30rpx;
+}
+.wait-pay-txt{
   display: inline-block;
-  margin-right: 15rpx;
-  vertical-align: middle;
-  width: 34rpx;
-  height: 38rpx;
+  margin-top: 30rpx;
+  color:#fff;
 }
+.order-prompt{
+  font-size:25rpx;
+  color:#FFEACC;
+  margin-top: 10rpx;
+}
+/* 收货信息 */
+.receipt{
+  width: 100%;
+  height: 170rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.receipt-icon{
+  display: inline-block;
+  margin-left: 30rpx;
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: -100rpx;
+  vertical-align: middle;
+}
+.receipt-txt{
+  display: inline-block;
+  margin-left: 45rpx;
+  margin-top: 25rpx;
+  width: 635rpx;
+}
+.receipt-name{
+  font-weight: bold;
+}
+.address-code{
+  position: absolute;
+  margin-right: 30rpx;
+  font-weight: bold;
+  right: 0;
+}
+.address{
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color:#888888;
+}
+/* 横线 */
+.line{
+  content:"";
+  margin-left: 30rpx;
+  width: 720rpx;
+  height: 1rpx;
+  background: #f5f5f5;
+}
+/* 身份证 */
+.user-id{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  background: #fff;
+}
+.user-icon{
+  display: inline-block;
+  margin-left: 30rpx;
+  margin-right: 40rpx;
+  width: 32rpx;
+  height: 46rpx;
+  vertical-align: middle;
+}
+/* 信封图片 */
 .envelope-icon{
   display: block;
   width: 750rpx;
   height: 15rpx;
-}
-/* 填写身份证信息 */
-.user-info{
-  width: 750rox;
-  height: 120rpx;
-  margin-top: 20rpx;
-  background: #fff;
-  overflow: hidden;
-}
-.user-info-center{
-  display: inline-block;
-  margin-left: 40rpx;
-}
-.user-info-icon{
-  display: inline-block;
-  margin-left: 30rpx;
-  margin-top: 38rpx;
-  width: 32rpx;
-  height: 46rpx;
-  vertical-align:  top;
-}
-.edit-info-icon{
-  display: inline-block;
-  margin-left: 55rpx;
-  margin-top: 40rpx;
-  width: 36rpx;
-  height: 38rpx;
-  padding-left: 20rpx;
-  vertical-align:  top;
-}
-.user-id{
-  font-weight: bold;
-  font-size: 32rpx;
-  margin-top: 30rpx;
-  margin-bottom: 20rpx;
-}
-.prompt-info{
-  color:#A6A6A6
 }
 /* 店铺信息 */
 .shop-info{
@@ -207,14 +253,10 @@ export default {
   color:#FF66A6;
 }
 .product-num{
- margin-left: 440rpx;
+  text-align: right;
+  margin-left: 420rpx;
 }
-/* 配送 */
-.distribution{
-  width: 750rpx;
-  height: 125rpx;
-  background: #fff;
-}
+
 /* 横线 */
 .line{
   content:"";
@@ -223,8 +265,15 @@ export default {
   height: 1rpx;
   background: #f5f5f5;
 }
+/* 配送 */
+.distribution{
+  width: 750rpx;
+  height: 125rpx;
+  background: #fff;
+}
 .distribution-way{
   display: inline-block;
+  color:#696969;
   font-size: 30rpx;
   margin-left: 30rpx;
   margin-top: 50rpx;
@@ -276,6 +325,7 @@ export default {
 }
 .total-txt{
   margin-left: 30rpx;
+  color:#696969;
 }
 .total-num{
   text-align: right;
@@ -326,7 +376,7 @@ export default {
 .submit-order-a{
   display: inline-block;
   position: absolute;
-  background: #A6A6A6;
+  background: #FF66A6;
   width: 186rpx;
   height: 100rpx;
   right: 0;
