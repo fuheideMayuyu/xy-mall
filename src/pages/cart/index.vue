@@ -69,6 +69,7 @@ export default {
   line-height: 80rpx;
   background: #fff;
   border-bottom: 1rpx solid #ddd;
+  box-shadow: 0px 10px 10px -10px #999 inset;
 }
 .all-radio{
   padding-left: 30rpx;

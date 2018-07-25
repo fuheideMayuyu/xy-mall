@@ -45,7 +45,7 @@ export default {
   padding-left: 20rpx;
 }
 .top{
-  border-top: 1px solid #f5f5f5;
+  box-shadow: 0px 10px 10px -10px #999 inset;
 }
 /* 商品类目文本 */
 .category-txt{

@@ -57,6 +57,7 @@ export default {
   border-top: 1rpx solid #f5f5f5;
   border-bottom: 1rpx solid #f5f5f5;
   font-size: 30rpx;
+  box-shadow: 0px 10px 10px -10px #999 inset;
 }
 .filter-w{
   display: inline-block;

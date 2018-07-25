@@ -20,10 +20,19 @@ export default {
       'pages/cart/main', // 购物车
       'pages/goodsFilter/main', // 分类筛选
       'pages/orderSubmit/main', // 订单待提交
-      'pages/orderPay/main', // 订单待支付
-      'pages/waitGoods/main', // 订单待发货
-      'pages/alreadyGoods/main', // 订单已发货
-      'pages/successGoods/main' // 订单已完成
+      'pages/orderPay/main', // 订单待支付详情页
+      'pages/waitGoods/main', // 订单待发货详情页
+      'pages/alreadyGoods/main', // 订单已发货详情页
+      'pages/successGoods/main', // 交易已完成详情页
+      'pages/orderShutInfo/main', // 交易关闭详情页
+      'pages/address/main', // 新增收货地址
+      'pages/editAddress/main', // 编辑收货地址
+      'pages/allOrderList/main', // 查看全部订单
+      'pages/waitPayList/main', // 查看待付款订单列表
+      'pages/waitShipList/main', // 查看待发货订单列表
+      'pages/alreadyShipList/main', // 查看已发货订单列表
+      'pages/orderSuccessList/main', // 查看已完成订单列表
+      'pages/logisticsInfo/main' // 查看物流信息
     ],
     window: {
       backgroundTextStyle: 'light',

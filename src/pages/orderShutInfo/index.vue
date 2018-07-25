@@ -1,15 +1,14 @@
 <template>
-<!-- 订单待付款详情页 -->
-  <div class="pay">
-    <!-- 付款提示 -->
+<!-- 已发货订单详情页 -->
+  <div class="shiped">
+    <!-- 发货提示 -->
     <div class="pay-header">
-      <image class="wait-pay-img" src="/static/images/icon-img/wait-pay-img.png"></image>
+      <image class="wait-pay-img" src="/static/images/icon-img/car-icon.png"></image>
       <div class="wait-pay-txt">
-        <p>等待买家付款</p>
-        <p class="order-prompt">请于52分0秒内付款，超时订单将自动关闭</p>
+        <p>交易关闭</p>
+        <p class="order-prompt">买家取消</p>
       </div>
     </div>
-    <m-orderStatus></m-orderStatus>
     <!-- 收货地址 -->
     <div class="receipt">
       <image class="receipt-icon" src="/static/images/icon-img/receipt-icon.png"></image>
@@ -19,7 +18,7 @@
         <p class="address">广东省深圳市南山区 软件产业基地 4栋A座501广东省深圳市南山区 软件产业基地 4栋A座501</p>
       </div>
     </div>
-    <!-- 身份证信息 -->
+        <!-- 身份证信息 -->
     <div class="user-id">
       <div class="line"></div>
       <image class="user-icon" src="/static/images/icon-img/user-info-icon.png"></image>
@@ -54,17 +53,16 @@
     </div>
     <!-- 商品总额和运费 -->
     <m-cost></m-cost>
-    <!-- 提交订单 -->
-    <div class="submit-order">
-      <span class="total-txt-bottom">合计:</span>
-      <span class="total-price">￥20.00</span>
-      <a class="submit-order-a">去支付</a>
+    <!-- 订单信息 -->
+    <div class="order-info">
+      <p>订单编号: 2018070902010203</p>
+      <p>创建时间: 2018-07-09 15:30:56</p>
+      <p>付款时间: 2018-07-09 15:30:56</p>
     </div>
   </div>
 </template>
 
 <script>
-import orderStatus from '@/components/orderStatus'
 import productInfo from '@/components/productInfo'
 import shopInfo from '@/components/shopInfo'
 import cost from '@/components/cost'
@@ -74,31 +72,29 @@ export default {
     return {}
   },
   components: {
-    'm-orderStatus': orderStatus,
     'm-productInfo': productInfo,
     'm-shopInfo': shopInfo,
     'm-cost': cost
   },
-  computed: {},
   methods: {}
 }
 </script>
 
 <style scoped>
-.pay{
+.shiped{
   width: 750rpx;
   overflow: hidden;
   font-size:30rpx;
 }
-/* 付款提示 */
+/* 发货提示 */
 .pay-header{
   width: 100%;
   height: 120rpx;
-  background: #FFAD33;
+  background: #FF5555;
 }
 .wait-pay-img{
-  width: 52rpx;
-  height: 44rpx;
+  width: 62rpx;
+  height: 46rpx;
   margin: auto 30rpx;
 }
 .wait-pay-txt{
@@ -108,14 +104,14 @@ export default {
 }
 .order-prompt{
   font-size:25rpx;
-  color:#FFEACC;
+  color:#FFD4D4;
   margin-top: 10rpx;
 }
+
 /* 收货信息 */
 .receipt{
   width: 100%;
   height: 170rpx;
-  margin-top: 20rpx;
   background: #fff;
 }
 .receipt-icon{
@@ -179,14 +175,6 @@ export default {
   height: 15rpx;
 }
 
-/* 横线 */
-.line{
-  content:"";
-  margin-left: 30rpx;
-  width: 720rpx;
-  height: 1rpx;
-  background: #f5f5f5;
-}
 /* 配送 */
 .distribution{
   width: 750rpx;
@@ -258,31 +246,19 @@ export default {
   color:#FF66A6;
 }
 
-/* 提交订单 */
-.submit-order{
-  width: 750rpx;
-  height: 100rpx;
-  margin-top: 20rpx;
-  line-height: 100rpx;
-  font-size: 30rpx;
+/* 订单信息 */
+.order-info{
+  width: 100%;
+  height: 200rpx;
   background: #fff;
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #A6A6A6;
 }
-.total-txt-bottom{
-  margin-left: 30rpx;
-  font-weight: bold;
-}
-.total-price{
-  margin-left: 10rpx;
-  color:#FF66A6;
-}
-.submit-order-a{
-  display: inline-block;
-  position: absolute;
-  background: #FF66A6;
-  width: 186rpx;
-  height: 100rpx;
-  right: 0;
-  color:#fff;
-  text-align: center;
+.order-info p{
+  height: 60rpx;
+  line-height: 60rpx;
 }
 </style>

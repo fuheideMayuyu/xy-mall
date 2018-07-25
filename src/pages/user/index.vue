@@ -5,27 +5,27 @@
       <img class="user-img" src="/static/images/icon-img/avatar.png">
       <button class="user-txt">点击获取头像</button>
     </div>
-    <div class="order">
+    <a class="order" href="/pages/allOrderList/main">
       <span class="my-order">我的订单</span>
-      <a class="all-order display-box" href="/pages/orderList/main">
+      <div class="all-order display-box">
         <span>查看全部订单</span>
         <image class="go-icon" src="/static/images/icon-img/go-icon.png"></image>
-      </a>
-    </div>
+      </div>
+    </a>
     <div class="order-status">
-      <a class="wait-pay public" href="/pages/orderPay/main">
+      <a class="wait-pay public" href="/pages/waitPayList/main">
         <image class="public-icon wait-pay-icon" src="/static/images/icon-img/wait-pay-icon.png"></image>
         <span class="public-txt">待付款</span>
       </a>
-      <a class="wait-ship public" href="/pages/waitGoods/main">
+      <a class="wait-ship public" href="/pages/waitShipList/main">
         <image class="public-icon wait-ship-icon" src="/static/images/icon-img/delivered-icon.png"></image>
         <span class="public-txt">待发货</span>
       </a>
-      <a class="ship public" href="/pages/alreadyGoods/main">
+      <a class="ship public" href="/pages/alreadyShipList/main">
         <image class="public-icon ship-icon" src="/static/images/icon-img/ship-icon.png"></image>
         <span class="public-txt">已发货</span>
       </a>
-      <a class="carry public" href="/pages/successGoods/main">
+      <a class="carry public" href="/pages/orderSuccessList/main">
         <image class="public-icon carry-icon" src="/static/images/icon-img/carry-icon.png"></image>
         <span class="public-txt">已完成</span>
       </a>
@@ -73,6 +73,7 @@ button::after{
 }
 /* 订单模块 */
 .order{
+  display: block;
   width: 750rpx;
   height: 100rpx;
   line-height: 100rpx;
@@ -92,6 +93,7 @@ button::after{
   margin-left: 410rpx;
   font-size:25rpx;
   color:#808080;
+  -webkit-tap-highlight-color:red;
 }
 .go-icon{
   display: inline-block;

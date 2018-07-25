@@ -1,11 +1,11 @@
 <template>
-<!-- 待付款订单 -->
-  <div class="wait-pay">
+<!-- 待付款订单详情页 -->
+  <div class="wait-pay" >
     <!-- 增加收货地址 -->
-    <div class="address">
+    <a class="address" href="/pages/address/main">
       <image class="address-icon" src="/static/images/icon-img/receipt-icon-active.png"></image>
       <span>新增收货地址</span>
-    </div>
+    </a>
    <!-- 信封图片 -->
     <image class="envelope-icon" src="/static/images/icon-img/envelope-icon.png"></image>
     <!-- 填写身份证信息 -->
@@ -18,21 +18,9 @@
       <image class="edit-info-icon" src="/static/images/icon-img/edit-info-icon.png"></image>
     </div>
     <!-- 店铺 -->
-    <a class="shop-info">
-      <image class="shop-info-icon" src="/static/images/icon-img/logo.png"></image>
-      <span class="shop-info-name">小梦的店铺</span>
-      <image class="go-shop-icon" src="/static/images/icon-img/go-icon.png"></image>
-    </a>
+    <m-shopInfo></m-shopInfo>
     <!-- 商品 -->
-    <div class="product-info">
-      <image class="product-info-img" src="/static/images/icon-img/product-icon.png"></image>
-      <div class="product-txt">
-        <p class="product-name">这里是名称这里是名称</p>
-        <p class="product-size">这里是规格</p>
-        <span class="product-price">￥10.00</span>
-        <span class="product-num">&times;1</span>
-      </div>
-    </div>
+    <m-productInfo></m-productInfo>
     <!-- 配送 -->
     <div class="distribution">
       <div class="line"></div>
@@ -55,16 +43,7 @@
       <span class="total-num">￥20.00</span>
     </div>
     <!-- 商品总额和运费 -->
-    <div class="cost">
-      <div class="product-cost">
-        <span class="cost-txt">商品总额</span>
-        <span class="cost-num">￥10.00</span>
-      </div>
-      <div class="product-cost">
-        <span class="cost-txt">运费</span>
-        <span class="cost-num">￥10.00</span>
-      </div>
-    </div>
+    <m-cost></m-cost>
     <!-- 提交订单 -->
     <div class="submit-order">
       <span class="total-txt-bottom">合计:</span>
@@ -75,11 +54,19 @@
 </template>
 
 <script>
+import productInfo from '@/components/productInfo'
+import shopInfo from '@/components/shopInfo'
+import cost from '@/components/cost'
+
 export default {
   data () {
     return {}
   },
-  components: {},
+  components: {
+    'm-productInfo': productInfo,
+    'm-shopInfo': shopInfo,
+    'm-cost': cost
+  },
   methods: {},
   created () {}
 }
@@ -88,6 +75,7 @@ export default {
 <style scoped>
 /* 新增收货地址 */
 .address{
+  display: inline-block;
   width: 750rpx;
   height: 120rpx;
   line-height: 120rpx;
@@ -146,69 +134,8 @@ export default {
 .prompt-info{
   color:#A6A6A6
 }
-/* 店铺信息 */
-.shop-info{
-  width: 750rpx;
-  height: 120rpx;
-  margin-top: 20rpx;
-  line-height: 120rpx;
-  background: #fff;
-  font-size: 30rpx;
-}
-.shop-info-icon{
-  width: 65rpx;
-  height: 65rpx;
-  vertical-align: middle;
-  margin-left: 30rpx;
-}
-.shop-info-name{
-  margin-left: 20rpx;
-  color:#696969;
-}
-.go-shop-icon{
-  width: 16.8rpx;
-  height: 30rpx;
-  vertical-align: middle;
-  margin-left: 450rpx;
-}
-/* 商品信息 */
-.product-info{
-  width: 750rpx;
-  height: 200rpx;
-  background: #fff;
-  margin-top: 2rpx;
-}
-.product-info-img{
-  display: inline-block;
-  margin-left: 30rpx;
-  width: 120rpx;
-  height: 120rpx;
-  vertical-align: bottom;
-}
-.product-txt{
-  display: inline-block;
-  margin-left: 20rpx;
-}
-.product-name{
-  overflow:hidden;
-  width: 300rpx;
-  font-size: 30rpx;
-  margin-top: 30rpx;
-  margin-bottom: 20rpx;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-.product-size{
-  font-size:25rpx;
-  color:#A6A6A6;
-  margin-bottom: 30rpx;
-}
-.product-price{
-  color:#FF66A6;
-}
-.product-num{
- margin-left: 440rpx;
-}
+
+
 /* 配送 */
 .distribution{
   width: 750rpx;
@@ -284,33 +211,12 @@ export default {
   margin-right: 30rpx;
   color:#FF66A6;
 }
-/* 商品总额和运费 */
-.cost{
-  width: 750rpx;
-  height: 134rpx;
-  margin-top: 20rpx;
-  background: #fff;
-  margin-bottom: 75rpx;
-  font-size:30rpx;
-}
-.product-cost{
-  width: 100%;
-  height: 67rpx;
-  line-height: 67rpx;
-}
-.cost-txt{
-  margin-left: 30rpx;
-}
-.cost-num{
-  text-align: right;
-  position: absolute;
-  right: 0;
-  margin-right: 30rpx;
-}
+
 /* 提交订单 */
 .submit-order{
   width: 750rpx;
   height: 100rpx;
+  margin-top: 20rpx;
   line-height: 100rpx;
   font-size: 30rpx;
   background: #fff;

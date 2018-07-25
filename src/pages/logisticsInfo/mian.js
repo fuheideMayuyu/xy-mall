@@ -6,6 +6,6 @@ app.$mount()
 
 export default {
   config: {
-    navigationBarTitleText: '订单列表'
+    navigationBarTitleText: '物流信息'
   }
 }
