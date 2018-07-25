@@ -3,7 +3,7 @@
   <div class="shiped">
     <!-- 发货提示 -->
     <div class="pay-header">
-      <image class="wait-pay-img" src="/static/images/icon-img/car-icon.png"></image>
+      <image class="wait-pay-img" src="/static/images/icon-img/text-icon2.png"></image>
       <div class="wait-pay-txt">
         <p>交易关闭</p>
         <p class="order-prompt">买家取消</p>
@@ -93,8 +93,8 @@ export default {
   background: #FF5555;
 }
 .wait-pay-img{
-  width: 62rpx;
-  height: 46rpx;
+  width: 44rpx;
+  height: 47rpx;
   margin: auto 30rpx;
 }
 .wait-pay-txt{

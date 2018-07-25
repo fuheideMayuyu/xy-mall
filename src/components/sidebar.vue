@@ -34,12 +34,16 @@ export default {
 
 <style scoped>
 /* 商品类目 */
+.sidebar{
+  font-size:28rpx;
+  font-family: PingFang;
+  color:#1E1E1E;
+}
 .category-list{
   display: inline-block;
   width: 750rpx;
   height: 80rpx;
   line-height: 80rpx;
-  font-size: 30rpx;
   background: #fff;
   border-bottom: 1px solid #f5f5f5;
   padding-left: 20rpx;

@@ -5,30 +5,9 @@
       <radio class="all-radio" color="#FF66A6"/>
       <span class="edit-txt">编辑</span>
     </div>
-    <div class="cart-product">
-      <radio class="alone-radio" color="#FF66A6"/>
-      <div class="cart-product-right">
-        <image class="cart-img" src="/static/images/product-img/1.jpg"></image>
-        <div class="cart-txt">
-          <p class="product-name">这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称</p>
-          <p class="product-size">这里是规格</p>
-          <span class="product-price">￥10.0</span>
-          <span class="product-num">&times;2</span>
-        </div>
-      </div>
-    </div>
-    <div class="cart-product">
-      <radio class="alone-radio" color="#FF66A6"/>
-      <div class="cart-product-right">
-        <image class="cart-img" src="/static/images/product-img/1.jpg"></image>
-        <div class="cart-txt">
-          <p class="product-name">这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称这里是名称</p>
-          <p class="product-size">这里是规格</p>
-          <span class="product-price">￥10.0</span>
-          <span class="product-num">&times;1</span>
-        </div>
-      </div>
-    </div>
+    <!-- 商品组件 -->
+    <m-cartShip></m-cartShip>
+    <m-cartShip></m-cartShip>
     <div class="settlement">
       <div class="settlement-l">
         <radio class="all-radio" color="#FF66A6"/>
@@ -45,11 +24,15 @@
 </template>
 
 <script>
+import cartShip from '@/components/cartShip'
+
 export default {
   data () {
     return {}
   },
-  components: {},
+  components: {
+    'm-cartShip': cartShip
+  },
   methods: {},
   created () {}
 }
@@ -76,86 +59,46 @@ export default {
   vertical-align: middle;
 }
 .edit-txt{
-  padding-left: 565rpx;
+  font-size: 28rpx;
+  font-family: SourceHanSansCN;
+  padding-left: 585rpx;
   color:#FF66A6;
-}
-/* 商品模块 */
-.cart-product{
-  width: 100%;
-  height: 200rpx;
-  background: #fff;
-  margin-bottom: 20rpx;
-}
-/* 单选按钮 */
-.alone-radio{
-  display: inline-block;
-  margin-left: 30rpx;
-  margin-bottom:100rpx;
-  vertical-align: middle;
-}
-/* 右侧商品 */
-.cart-product-right{
-  display: inline-block;
-  margin-left: 20rpx;
-}
-.cart-img{
-  width: 140rpx;
-  height: 140rpx;
-  margin-top: 30rpx;
 }
 
-.cart-txt{
-  display: inline-block;
-  margin-left: 30rpx;
-  vertical-align:top;
-  margin-top: 38rpx;
-}
-.product-size{
-  font-size:25rpx;
-  color:#ddd;
-  margin-top: 15rpx;
-  margin-bottom: 30rpx;
-}
-.product-name{
-  width: 450rpx;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-.product-price{
-  color:#FF66A6;
-}
-.product-num{
-  margin-left: 310rpx;
-}
 /* 结算模块 */
 .settlement{
   position: fixed;
   width: 750rpx;
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-family: SourceHanSansCN;
   bottom: 0;
   background: #fff;
 }
 .settlement-l{
   display: inline-block;
   width: 200rpx;
-  height: 100rpx;
+  height: 100%;
   padding-bottom: 20rpx;
   overflow: hidden;
 }
 .all-txt{
   margin-left: 20rpx;
+  font-size:28rpx;
 }
 .settlement-r{
   display: inline-block;
-  overflow: hidden;
+  position: absolute;
+  right: 0;
+  margin-right: 220rpx;
+  text-align: right;
+  /* overflow: hidden; */
 }
 .price-txt{
   display: inline-block;
   vertical-align:top;
+  font-size: 24rpx;
   margin-top: -20rpx;
-  margin-left: 150rpx;
 }
 .price{
   display: inline-block;
@@ -165,17 +108,17 @@ export default {
 }
 .freight-txt{
   display: inline-block;
-  vertical-align:bottom;
   margin-top: 18rpx;
   margin-left: -95rpx;
   font-size:20rpx;
-  color:#696969;
+  color:#999999;
+  vertical-align:bottom;
 }
 .settlement-txt{
   position: absolute;;
   display: inline-block;
   right: 0;
-  font-size: 40rpx;
+  font-size: 28rpx;
   width: 200rpx;
   height: 100%;
   color: #fff;

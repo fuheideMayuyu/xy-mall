@@ -47,6 +47,7 @@ export default {
 <style scoped>
 .user{
   background: #f5f5f5;
+  font-family: Adobe 黑体 Std;
 }
 /* 用户模块 */
 .user-module{
@@ -65,6 +66,7 @@ button{
   padding: 0;
   margin-top: 20rpx;
   padding-bottom: 50rpx;
+  font-size: 24rpx;
   color:#FF66A6;
   background: #fff;
 }
@@ -85,14 +87,15 @@ button::after{
 }
 .my-order{
   margin-left: 20rpx;
-  font-weight:bold;
+  font-size: 28rpx;
+  color: #262626;
 }
 .all-order{
   display: inline-block;
   margin-top: -25rpx;
   margin-left: 410rpx;
-  font-size:25rpx;
-  color:#808080;
+  font-size:22rpx;
+  color:#A6A6A6;
   -webkit-tap-highlight-color:red;
 }
 .go-icon{
@@ -107,6 +110,8 @@ button::after{
 .order-status{
   width: 750rpx;
   height: 650rpx;
+  font-size: 22rpx;
+  color: #606060;
   line-height: 250rpx;
   background: #fff;
   padding-top: 30rpx;

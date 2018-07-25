@@ -32,7 +32,7 @@ export default {
       'pages/waitShipList/main', // 查看待发货订单列表
       'pages/alreadyShipList/main', // 查看已发货订单列表
       'pages/orderSuccessList/main', // 查看已完成订单列表
-      'pages/logisticsInfo/main' // 查看物流信息
+      'pages/logisticsInfo/main' // 物流信息页
     ],
     window: {
       backgroundTextStyle: 'light',

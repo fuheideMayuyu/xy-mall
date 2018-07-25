@@ -25,6 +25,9 @@ export default {
   margin-bottom: 30rpx;
   width: 710rpx;
   height: 55rpx;
+  font-size:24rpx;
+  font-family: PingFang;
+  color:#B0B0B0;
   line-height: 55rpx;
   font-size:30rpx;
   border: 2rpx solid #f5f5f5;

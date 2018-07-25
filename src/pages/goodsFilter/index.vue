@@ -53,10 +53,12 @@ export default {
 .filter{
   width: 750rpx;
   height: 80rpx;
+  font-size:28rpx;
+  font-family: PingFang;
+  color: #303030;
   background: #fff;
   border-top: 1rpx solid #f5f5f5;
   border-bottom: 1rpx solid #f5f5f5;
-  font-size: 30rpx;
   box-shadow: 0px 10px 10px -10px #999 inset;
 }
 .filter-w{

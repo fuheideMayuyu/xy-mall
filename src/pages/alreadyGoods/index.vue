@@ -110,7 +110,7 @@ export default {
   background: #308DE5;
 }
 .wait-pay-img{
-  width: 62rpx;
+  width: 61rpx;
   height: 46rpx;
   margin: auto 30rpx;
 }

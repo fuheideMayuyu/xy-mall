@@ -10,9 +10,11 @@
       <span>合计:</span>
       <span class="price-num">￥30.00</span>
       <button class="btn extend">延长收货</button>
-      <button href="/pages/logisticsInfo/main" class="btn cancel">
-        <a href="/pages/logisticsInfo/main">查看物流</a>
-      </button>
+      <a class="logistics" href="/pages/logisticsInfo/main">
+        <button class="btn cancel">
+          查看物流
+        </button>
+      </a>
       <button class="btn confirm">确认收货</button>
     </div>
   </div>
@@ -83,21 +85,27 @@ export default {
   width: 150rpx;
   height: 60rpx;
   line-height: 60rpx;
-  margin-top: 15rpx;
+
   border: 1rpx solid #ddd;
   border-radius: 30rpx;
   background: #fff;
 }
+.logistics{
+  display: inline-block;
+}
 .extend{
+  margin-top: 15rpx;
   margin-right: 350rpx;
 }
 .confirm{
+  margin-top: 15rpx;
   margin-right: 30rpx;
   color:#FF66A6;
   border: 1rpx solid #FF66A6;
 }
 .cancel{
   margin-right: 190rpx;
+  margin-top: -35rpx;
 }
 </style>
 

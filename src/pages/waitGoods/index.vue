@@ -96,7 +96,7 @@ export default {
   background: #FF66A6;
 }
 .wait-pay-img{
-  width: 52rpx;
+  width: 55rpx;
   height: 44rpx;
   margin: auto 30rpx;
   vertical-align: middle;

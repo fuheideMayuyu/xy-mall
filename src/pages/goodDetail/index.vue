@@ -5,7 +5,7 @@
       <p>这里是名称这里是名称这里是名称这里是名称这里
         是名称这里是名称这里是名称这里是名...</p>
       <div><span class="price-color">¥10.0</span><span class="icon-box float-right">
-        <image class="share-icon" src="/static/images/icon-img/share-icon.png" alt="" mode="widthFix" /></span>
+        <image class="share-icon arrow-icon" src="/static/images/icon-img/arrow-icon.png" alt="" mode="widthFix" /></span>
       </div>
     </div>
     <div class="good-info box-padding">
@@ -15,7 +15,7 @@
     </div>
     <div class="store-info box-padding">
       <div class="store-logo display-box_3 float-left">
-        <image src="/static/images/icon-img/store-icon.png" mode="widthFix"></image>
+        <image src="/static/images/icon-img/logo.png" mode="widthFix"></image>
       </div>
       <div class="store-name display-box_3 float-left">小梦的店铺</div>
       <div class="more-icon display-box_3 float-right">
@@ -24,7 +24,7 @@
     <!-- 底部按钮 -->
     <div class="footer">
       <div class="car-icon float-left align-center">
-        <image src="/static/images/icon-img/cart.png" mode="widthFix"></image>
+        <image src="/static/images/icon-img/shop-cart.png" mode="widthFix"></image>
       </div>
       <div class="add-good-btn float-left btn_orange btn-txt-color_white align-center" @click="addHandle">加入购物车</div>
       <div class="buy-now-btn float-left btn_purple btn-txt-color_white align-center">立即购买</div>
@@ -138,6 +138,10 @@
     display: inline-block;
     width: 25rpx;
     height: 25rpx;
+  }
+  .arrow-icon{
+    width: 36rpx;
+    height: 36rpx;
   }
   .footer .car-icon {
     width: 20%;

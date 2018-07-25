@@ -107,7 +107,7 @@ export default {
 }
 .wait-pay-img{
   width: 44rpx;
-  height: 48rpx;
+  height: 47rpx;
   margin: auto 30rpx;
   vertical-align: middle;
 }
